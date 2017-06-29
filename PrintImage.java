@@ -19,12 +19,15 @@ public class PrintImage {
     PrintService pss[] = PrintServiceLookup.lookupPrintServices(DocFlavor.INPUT_STREAM.GIF, pras);
     if (pss.length == 0)
       throw new RuntimeException("No printer services available.");
+    for (int i = 0; i < pss.length; i++) {
+      System.out.println(pss[i]);    
+    }
     PrintService ps = pss[0];
     System.out.println("Printing to " + ps);
     DocPrintJob job = ps.createPrintJob();
-    FileInputStream fin = new FileInputStream("YOurImageFileName.PNG");
+    FileInputStream fin = new FileInputStream("/Users/struh/Pictures/error.PNG");
     Doc doc = new SimpleDoc(fin, DocFlavor.INPUT_STREAM.GIF, null);
     job.print(doc, pras);
     fin.close();
   }
-}  
+}
