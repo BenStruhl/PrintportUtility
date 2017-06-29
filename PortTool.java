@@ -1,10 +1,7 @@
-import java.util.*;
-import java.awt.print.*;
-
 public class PortTool {
-
-
-
+  
+  
+  
   private static void main(String[] args) {
 
     // holds amount of files in the staging area
@@ -18,15 +15,15 @@ public class PortTool {
     } else {
       System.out.println("Found no files to");
     }
-
+    
   }
-
-  // void -> void
+  
+  // void -> void 
   // goes through the specificed directory and prints out any
-  // documents to the PaperPort tool;
+  // documents to the PaperPort tool; 
   private static void exportFiles(String path) {
     System.out.println("test");
   }
-
-
+  
+  
 }
